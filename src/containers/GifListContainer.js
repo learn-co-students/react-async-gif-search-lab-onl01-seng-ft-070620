@@ -14,12 +14,11 @@ export default class GifListContainer extends Component
         fetch(`https://api.giphy.com/v1/gifs/search?q=${value}&api_key=dc6zaTOxFJmzC&rating=g`)
         .then(r => r.json())
         .then(r => {
-            console.log('submitted')
+            this.setState({gifs: []})
             for(let i = 0; i < 3; i++)
             {
                 this.setState((prevState) => {return {gifs: prevState.gifs.concat([r.data[i].images.original.url])}})
             }
-            console.log(this.state.gifs)
         })
     }
 
