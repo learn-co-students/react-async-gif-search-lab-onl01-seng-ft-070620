@@ -88,7 +88,7 @@ a prop.
 
 It will also render a `<GifSearch />` component that renders the form.
 `<GifListContainer />` should pass down a submit handler function to `<GifSearch />`
-as a prop.
+as a prop. 
 
 #### `<GifList />`
 
